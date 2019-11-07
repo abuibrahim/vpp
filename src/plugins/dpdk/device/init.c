@@ -781,6 +781,7 @@ dpdk_lib_init (dpdk_main_t * dm)
 		      format_dpdk_device_name, i,
 		      format_dpdk_device_errors, xd);
 
+#if 0
       if (devconf->hqos_enabled)
 	{
 	  clib_error_t *rv;
@@ -788,6 +789,7 @@ dpdk_lib_init (dpdk_main_t * dm)
 	  if (rv)
 	    return rv;
 	}
+#endif
 
       /*
        * A note on Cisco VIC (PMD_ENIC) and VLAN:
