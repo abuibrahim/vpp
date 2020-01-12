@@ -52,6 +52,7 @@ list(APPEND VNET_HEADERS
   devices/devices.h
   devices/netlink.h
   flow/flow.h
+  format_fns.h
   global_funcs.h
   handoff.h
   interface.h
@@ -150,6 +151,7 @@ list(APPEND VNET_MULTIARCH_SOURCES
 list(APPEND VNET_HEADERS
   ethernet/error.def
   ethernet/ethernet.h
+  ethernet/ethernet_format_fns.h
   ethernet/mac_address.h
   ethernet/packet.h
   ethernet/types.def
@@ -493,8 +495,11 @@ list(APPEND VNET_HEADERS
   ip/ip6.h
   ip/ip6_hop_by_hop.h
   ip/ip6_hop_by_hop_packet.h
+  ip/ip6_ll_table.h
+  ip/ip6_ll_types.h
   ip/ip6_packet.h
   ip/ip.h
+  ip/ip_format_fns.h
   ip/ip_packet.h
   ip/ip_source_and_port_range_check.h
   ip/ip_types.h
