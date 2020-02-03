@@ -1047,7 +1047,8 @@ ip_neighbor_walk (ip46_type_t type,
           /* *INDENT-OFF* */
           hash_foreach (key, ipni, *hash,
           ({
-            cb (ipni, ctx);
+            if (cb (ipni, ctx) == WALK_STOP)
+	      break;
           }));
           /* *INDENT-ON* */
       }
@@ -1063,7 +1064,8 @@ ip_neighbor_walk (ip46_type_t type,
       /* *INDENT-OFF* */
       hash_foreach (key, ipni, hash,
       ({
-        cb (ipni, ctx);
+        if (cb (ipni, ctx) == WALK_STOP)
+	  break;
       }));
       /* *INDENT-ON* */
     }
